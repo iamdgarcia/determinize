@@ -1,0 +1,16 @@
+{"type": "message", "message": {"role": "assistant", "content": [{"type": "toolCall", "id": "1", "name": "bash", "arguments": {"command": "export SSL_CERT_FILE=/x/cacert.pem; git status"}}]}}
+{"type": "message", "message": {"role": "toolResult", "toolCallId": "1", "content": [{"type": "text", "text": "On branch main\nnothing to commit"}]}}
+{"type": "message", "message": {"role": "assistant", "content": [{"type": "toolCall", "id": "2", "name": "read", "arguments": {"path": "src/app.py"}}]}}
+{"type": "message", "message": {"role": "toolResult", "toolCallId": "2", "content": [{"type": "text", "text": "def main():\n    pass"}]}}
+{"type": "message", "message": {"role": "assistant", "content": [{"type": "toolCall", "id": "3", "name": "read", "arguments": {"path": "src/app.py"}}]}}
+{"type": "message", "message": {"role": "toolResult", "toolCallId": "3", "content": [{"type": "text", "text": "def main():\n    pass"}]}}
+{"type": "message", "message": {"role": "assistant", "content": [{"type": "toolCall", "id": "4", "name": "bash", "arguments": {"command": "ls -la"}}]}}
+{"type": "message", "message": {"role": "toolResult", "toolCallId": "4", "content": [{"type": "text", "text": "src tests README.md"}]}}
+{"type": "message", "message": {"role": "assistant", "content": [{"type": "toolCall", "id": "5", "name": "bash", "arguments": {"command": "ls -la"}}]}}
+{"type": "message", "message": {"role": "toolResult", "toolCallId": "5", "content": [{"type": "text", "text": "src tests README.md"}]}}
+{"type": "message", "message": {"role": "assistant", "content": [{"type": "toolCall", "id": "6", "name": "bash", "arguments": {"command": "git fetch origin main"}}]}}
+{"type": "message", "message": {"role": "toolResult", "toolCallId": "6", "isError": true, "content": [{"type": "text", "text": "fatal: unable to access: gnutls handshake failed"}]}}
+{"type": "message", "message": {"role": "assistant", "content": [{"type": "toolCall", "id": "7", "name": "bash", "arguments": {"command": "git fetch origin main"}}]}}
+{"type": "message", "message": {"role": "toolResult", "toolCallId": "7", "content": [{"type": "text", "text": "From origin\n * branch main"}]}}
+{"type": "message", "message": {"role": "assistant", "content": [{"type": "toolCall", "id": "8", "name": "write", "arguments": {"path": "src/app.py"}}]}}
+{"type": "message", "message": {"role": "toolResult", "toolCallId": "8", "content": [{"type": "text", "text": "OK"}]}}
